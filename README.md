@@ -19,6 +19,8 @@ After cloning the repository, run the following from the root directory to insta
 
     pipenv install
 
+    python -m pip install .
+
 To run the utility, either execute
 
     pipenv run python -m shamir [...]
