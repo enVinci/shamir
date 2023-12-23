@@ -1,12 +1,16 @@
-prime_offsets_filename = 'shamir/data/prime-offsets.dat'
+import os
+from pathlib import Path
+
+prime_offsets_filename = 'data/prime-offsets.dat'
 
 # Description of largest primes smaller than some powers of 2.
 # Offets from the Online Encyclopedia of Integer Sequences (OEIS)
 # http://oeis.org/A013603/b013603.txt
 # Values range from 1 up to 4096
 
+current_directory = os.path.dirname(os.path.abspath(__file__))
 # Corresponding primes given by: p = 2**idx - value
-with open(prime_offsets_filename, 'r') as f:
+with open(Path(current_directory) / prime_offsets_filename, 'r') as f:
     prime_offsets = [None] + [int(n) for n in f]
 
 

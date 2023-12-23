@@ -11,7 +11,7 @@ setuptools.setup(
     description="Shamir secret sharing for BIP-0039 seed phrases",
     url="https://github.com/bgillesp/shamir",
     packages=["shamir"],
-    install_requires=['mnemonic', 'typing', 'click'],
+    install_requires=['mnemonic', 'typing', 'click', 'pathlib'],
     include_package_data=True,
     package_data={"shamir": ["data/*.dat", 'adapters/**']},
     entry_points={
